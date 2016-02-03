@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">DiabetesToolkit</string>
+    <string name="app_exit_app_tips">press back again to exit app</string>
+    <string name="frag_more">More</string>
+    <string name="frag_overview">Overview</string>
+    <string name="frag_education">Education</string>
+    <string name="frag_medication">Medication</string>
 </resources>
