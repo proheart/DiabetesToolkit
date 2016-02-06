@@ -9,11 +9,13 @@ import android.view.WindowManager;
 
 import edu.auburn.app.diabetestoolkit.R;
 import edu.auburn.app.diabetestoolkit.activity.base.BaseFragmentActivity;
+import edu.auburn.app.diabetestoolkit.widget.GifView;
 
 /**
  * Created by liguorui on 2/1/16.
  */
 public class SplashActivity extends BaseFragmentActivity {
+    private GifView gfLoading;
     private Handler mHandler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
@@ -29,11 +31,13 @@ public class SplashActivity extends BaseFragmentActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
+        gfLoading = (GifView)findViewById(R.id.gvLoading);
+        gfLoading.setMovieResource(R.drawable.loadimg);
         showApp();
     }
     private void showApp(){
         if (mHandler != null){
-            mHandler.sendEmptyMessageDelayed(0, 1500);
+            mHandler.sendEmptyMessageDelayed(0, 2500);
         }
     }
 }
