@@ -6,6 +6,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import edu.auburn.app.diabetestoolkit.DiabetesApplication;
 
 /**
  * Created by liguorui on 2/1/16.
@@ -54,5 +57,12 @@ public class BaseFragment extends Fragment {
     }
     public ParentInterface getParentInterface(){
         return mParentInterface;
+    }
+
+    public void showToast(String message) {
+        Toast.makeText(DiabetesApplication.getApp(), message, Toast.LENGTH_SHORT).show();
+    }
+    public void showToast(int messageId){
+        Toast.makeText(DiabetesApplication.getApp(), messageId, Toast.LENGTH_SHORT).show();
     }
 }

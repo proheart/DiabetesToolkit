@@ -1,13 +1,237 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:background="@android:color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:text="fragment_overview"
-        android:textColor="@android:color/black"
-        android:gravity="center"
+
+    <RelativeLayout
+        android:layout_marginTop="50dp"
+        android:id="@+id/rlNew"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/ivLeft"
+            android:layout_width="@dimen/overview_img_left"
+            android:layout_height="@dimen/overview_img_left"
+            android:layout_marginLeft="10dip"
+            android:layout_centerVertical="true"
+            android:src="@drawable/book"/>
+        <TextView
+            android:layout_toRightOf="@id/ivLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/overview_img_left"
+            android:text="Enter New Reading"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dip" />
+        <TextView
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+
+            android:layout_width="@dimen/overview_img_left"
+            android:layout_height="@dimen/overview_img_left"
+            android:text=">"
+            android:gravity="center_vertical" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@android:color/black"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_centerVertical="true" />
+    <RelativeLayout
+        android:id="@+id/rlViewAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/ivLeft2"
+            android:layout_width="@dimen/overview_img_left"
+            android:layout_height="@dimen/overview_img_left"
+            android:layout_marginLeft="10dip"
+            android:layout_centerVertical="true"
+            android:src="@drawable/book"/>
+        <TextView
+            android:layout_toRightOf="@id/ivLeft2"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/overview_img_left"
+            android:text="View All Readings"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dip" />
+        <TextView
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/overview_img_left"
+            android:layout_height="@dimen/overview_img_left"
+            android:text=">"
+            android:gravity="center_vertical" />
+    </RelativeLayout>
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="BLOOD GLUCOSE"
+        android:layout_centerVertical="true" />
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Reading"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dip" />
+        <TextView
+            android:layout_toLeftOf="@+id/tvRight0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="500" />
+
+        <TextView
+            android:id="@+id/tvRight0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mg/dl"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dip" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@android:color/black"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_centerVertical="true" />
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily Average"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dip" />
+    <TextView
+        android:layout_toLeftOf="@+id/tvRight1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="500" />
+
+    <TextView
+        android:id="@+id/tvRight1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mg/dl"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dip" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@android:color/black"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_centerVertical="true" />
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weekly Average"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dip" />
+    <TextView
+        android:layout_toLeftOf="@+id/tvRight2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="500" />
+
+    <TextView
+        android:id="@+id/tvRight2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mg/dl"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dip" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@android:color/black"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_centerVertical="true" />
+    <RelativeLayout
+
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monthly Average"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dip" />
+        <TextView
+            android:layout_toLeftOf="@+id/tvRight3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="500" />
+
+        <TextView
+            android:id="@+id/tvRight3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mg/dl"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dip" />
+    </RelativeLayout>
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="CARBOHYDRATES"
+        android:layout_centerVertical="true" />
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Today"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dip" />
+        <TextView
+            android:layout_toLeftOf="@+id/tvRight4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/tvRight4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="g"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dip" />
+    </RelativeLayout>
+
 
 </LinearLayout>

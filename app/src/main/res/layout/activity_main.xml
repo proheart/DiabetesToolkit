@@ -2,14 +2,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical" >
 
     <TextView
         android:id="@+id/tvTitle"
         android:text="title"
         android:gravity="center"
+        android:background="@drawable/af7"
         android:layout_width="match_parent"
-        android:layout_height="48dip" />
+        android:layout_height="@dimen/top" />
     <RelativeLayout
         android:id="@+id/main_content"
         android:layout_width="fill_parent"
@@ -26,53 +28,47 @@
     <RadioGroup
         android:id="@+id/main_radio_group"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_gravity="bottom"
-        android:background="#5CACEE"
+
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:weightSum="4" >
+        android:weightSum="5" >
 
         <RadioButton
             android:id="@+id/main_radio_button_overview"
             style="@style/main_tab_bottom"
-            android:layout_marginBottom="-2dp"
-            android:layout_marginLeft="-5dp"
-            android:layout_marginTop="-1dp"
-            android:background="#FF4500"
-            android:drawableTop="@drawable/bg_normal_btn"
-            android:tag="radio_button0"
-            android:textSize="1sp" />
+            android:text="Overview"
+
+            android:drawableTop="@null"
+            android:background="@drawable/tab1_select"
+            android:tag="radio_button0" />
 
         <RadioButton
             android:id="@+id/main_radio_button_medication"
             style="@style/main_tab_bottom"
-            android:layout_marginBottom="-2dp"
-            android:layout_marginTop="-1dp"
-            android:background="#BFBFBF"
-            android:drawableTop="@drawable/bg_normal_btn"
-            android:tag="radio_button1"
-            android:textSize="1sp" />
-
+            android:text="Medicatioin"
+            android:background="@drawable/tab1_select"
+            android:tag="radio_button1" />
+        <RadioButton
+            android:id="@+id/main_radio_button_forum"
+            style="@style/main_tab_bottom"
+            android:text="Forum"
+            android:background="@drawable/tab1_select"
+            android:tag="radio_button2" />
         <RadioButton
             android:id="@+id/main_radio_button_education"
             style="@style/main_tab_bottom"
-            android:layout_marginBottom="-2dp"
-            android:layout_marginTop="-1dp"
-            android:background="#9F79EE"
-            android:drawableTop="@drawable/bg_normal_btn"
-            android:tag="radio_button2"
-            android:textSize="1sp" />
+            android:text="Education"
+            android:background="@drawable/tab1_select"
+            android:tag="radio_button3"/>
 
         <RadioButton
             android:id="@+id/main_radio_button_more"
             style="@style/main_tab_bottom"
-            android:layout_marginBottom="-2dp"
-            android:layout_marginTop="-1dp"
-            android:background="#6E8B3D"
-            android:drawableTop="@drawable/bg_normal_btn"
-            android:tag="radio_button3"
-            android:textSize="1sp" />
+            android:text="More"
+            android:background="@drawable/tab1_select"
+            android:tag="radio_button4" />
     </RadioGroup>
 
 </LinearLayout>

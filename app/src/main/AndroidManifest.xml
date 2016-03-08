@@ -10,6 +10,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!---->
         <activity android:name=".activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,8 +18,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--
+        <activity android:name=".activity.base.TestActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
         <activity android:name=".activity.MainActivity"
             android:screenOrientation="portrait"/>
-    </application>
+        <activity android:name=".activity.WebViewActivity"></activity>
+        <activity android:name=".activity.ViewStateActivity"></activity>
+        <activity android:name=".activity.AddStateActivity"></activity>
 
+    </application>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 </manifest>
+

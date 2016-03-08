@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_marginLeft="@dimen/margin_left"
+        android:textColor="@android:color/black"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/tvDate"
+        android:text="15/3/23 12:55"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
+    <TextView
+        android:layout_marginLeft="120dp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@id/tvDate"
+        android:text="55"
+        android:id="@+id/tvNumber"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
+    <TextView
+        android:layout_marginLeft="@dimen/margin_right"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@id/tvNumber"
+        android:text="mg/dL"
+        android:id="@+id/tvUnit"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
+    <TextView
+        android:layout_marginRight="@dimen/margin_right"
+        android:textColor="@android:color/black"
+        android:layout_alignParentRight="true"
+        android:text=">"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
+
+</RelativeLayout>

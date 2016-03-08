@@ -14,8 +14,6 @@ import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import edu.auburn.app.diabetestoolkit.R;
 import edu.auburn.app.diabetestoolkit.activity.base.BaseFragment;
 import edu.auburn.app.diabetestoolkit.activity.base.BaseFragmentActivity;
@@ -67,7 +65,7 @@ public class MainActivity extends BaseFragmentActivity implements RadioGroup.OnC
         rbMedication = (RadioButton)findViewById(R.id.main_radio_button_medication);
         rbEducation = (RadioButton)findViewById(R.id.main_radio_button_education);
         rbMore = (RadioButton)findViewById(R.id.main_radio_button_more);
-
+        rbForum = (RadioButton)findViewById(R.id.main_radio_button_forum);
         rgTabGroup.setOnCheckedChangeListener(this);
         rbOverView.setChecked(true);
     }
@@ -92,6 +90,14 @@ public class MainActivity extends BaseFragmentActivity implements RadioGroup.OnC
                 }
                 tvTitle.setText(R.string.frag_medication);
                 addFragment(bfMedication, R.id.main_radio_button_medication + "");
+                break;
+            case R.id.main_radio_button_forum:
+                if (bfForum == null) {
+                    bfForum = new ForumFragment();
+                    bfForum.setParentInterface(this);
+                }
+                tvTitle.setText(R.string.frag_forum);
+                addFragment(bfForum, R.id.main_radio_button_forum + "");
                 break;
             case R.id.main_radio_button_education:
                 if (bfEducation == null) {
@@ -172,6 +178,7 @@ public class MainActivity extends BaseFragmentActivity implements RadioGroup.OnC
 
     @Override
     public void finish() {
+
         super.finish();
     }
 }
