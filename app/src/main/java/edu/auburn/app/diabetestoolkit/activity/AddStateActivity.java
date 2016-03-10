@@ -106,7 +106,8 @@ public class AddStateActivity extends BaseActivity implements View.OnClickListen
     private void saveState(){
         if (formatTime()!=-1){
             stateService.add(new StateModel(formatTime()+"",etBlood.getText().toString(),etNotes.getText().toString()));
-            showToast("save success");
+            showToast("Save successfully!");
+            this.finish();
         }
 
     }

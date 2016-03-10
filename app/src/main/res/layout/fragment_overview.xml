@@ -101,6 +101,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="15dp"
+            android:id="@+id/tvLast"
             android:text="500" />
 
         <TextView
@@ -114,8 +115,8 @@
     </RelativeLayout>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@drawable/line"
+        android:layout_height="1dp"
+        android:background="@color/topBgColor"
         android:layout_centerVertical="true" />
     <RelativeLayout
         android:layout_marginRight="20dp"
@@ -135,6 +136,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="15dp"
+        android:id="@+id/tvDaily"
         android:text="500" />
 
     <TextView
@@ -148,8 +150,8 @@
     </RelativeLayout>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@drawable/line"
+        android:layout_height="1dp"
+        android:background="@color/topBgColor"
         android:layout_centerVertical="true" />
     <RelativeLayout
         android:layout_marginRight="20dp"
@@ -168,6 +170,7 @@
             android:layout_toLeftOf="@+id/tvRight2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/tvWeek"
             android:textSize="15dp"
             android:text="500" />
 
@@ -182,8 +185,8 @@
     </RelativeLayout>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@drawable/line"
+        android:layout_height="1dp"
+        android:background="@color/topBgColor"
         android:layout_centerVertical="true" />
     <RelativeLayout
         android:layout_marginRight="20dp"
@@ -201,6 +204,7 @@
             android:layout_toLeftOf="@+id/tvRight3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/tvMonth"
             android:text="500" />
 
         <TextView
@@ -237,6 +241,7 @@
         <TextView
             android:layout_toLeftOf="@+id/tvRight4"
             android:layout_width="wrap_content"
+            android:id="@+id/tvTotal"
             android:layout_height="wrap_content"
             android:textSize="15dp"
             android:text="0" />

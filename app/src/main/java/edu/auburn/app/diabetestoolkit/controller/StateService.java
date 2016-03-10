@@ -82,5 +82,58 @@ public class StateService {
         cursor.close();
         return model;
     }
+
+    public String getDaily(){
+        int sum = 0;
+        List<StateModel> lists = getList();
+        int size = lists.size();
+        if(size == 0)
+            return String.valueOf(0);
+        for (int i = 0;i<size;i++){
+            String blood = lists.get(i).getBlood();
+            int b = Integer.parseInt(blood);
+            sum += b;
+        }
+        int result = sum/size;
+        return String.valueOf(result);
+    }
+    public String getWeek(){
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        String sql = "select * from state order by sid desc";
+        Cursor cursor = db.rawQuery(sql,null);
+        int pos=0;
+        int sum = 0;
+        while(cursor.moveToNext()){
+            pos = cursor.getPosition();
+            if(pos==7) break;
+
+            String blood = cursor.getString(cursor.getColumnIndex("blood"));
+            int b = Integer.parseInt(blood);
+            sum += b;
+        }
+        cursor.close();
+        if(pos == 0)
+            return String.valueOf(0);
+        return String.valueOf((sum/pos));
+    }
+    public String getMonth(){
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        String sql = "select * from state order by sid desc";
+        Cursor cursor = db.rawQuery(sql,null);
+        int pos=0;
+        int sum = 0;
+        while(cursor.moveToNext()){
+            pos = cursor.getPosition();
+            if(pos==30) break;
+
+            String blood = cursor.getString(cursor.getColumnIndex("blood"));
+            int b = Integer.parseInt(blood);
+            sum += b;
+        }
+        cursor.close();
+        if(pos == 0)
+            return String.valueOf(0);
+        return String.valueOf((sum/pos));
+    }
 }
 
