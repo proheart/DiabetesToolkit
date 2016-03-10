@@ -3,6 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
+        android:background="@color/topBgColor"
         android:layout_width="match_parent"
         android:layout_height="@dimen/top">
         <TextView
@@ -13,7 +14,6 @@
             android:background="@drawable/back"/>
         <TextView
             android:id="@+id/tvName"
-
             android:textColor="@color/topView"
             android:textSize="@dimen/topView"
             android:layout_gravity="center"

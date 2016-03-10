@@ -8,6 +8,7 @@
         android:layout_height="wrap_content"
         layout="@layout/top_view"/>
     <ListView
+        android:background="@drawable/biaoti_back"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp"

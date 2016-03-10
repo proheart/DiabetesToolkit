@@ -8,8 +8,10 @@
     <TextView
         android:id="@+id/tvTitle"
         android:text="title"
+        android:textSize="20dp"
+        android:textColor="#1a1a1a"
         android:gravity="center"
-        android:background="@drawable/af7"
+        android:background="@color/topBgColor"
         android:layout_width="match_parent"
         android:layout_height="@dimen/top" />
     <RelativeLayout
@@ -17,7 +19,6 @@
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1" >
-
         <RelativeLayout
             android:id="@+id/main_fragment_content"
             android:layout_width="fill_parent"
@@ -25,49 +26,56 @@
         </RelativeLayout>
     </RelativeLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/darker_gray"/>
     <RadioGroup
         android:id="@+id/main_radio_group"
         android:layout_width="fill_parent"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:layout_gravity="bottom"
-
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:weightSum="5" >
 
         <RadioButton
+
             android:id="@+id/main_radio_button_overview"
             style="@style/main_tab_bottom"
             android:text="Overview"
-
-            android:drawableTop="@null"
-            android:background="@drawable/tab1_select"
+            android:drawableTop="@drawable/tab1_d"
+            android:textColor="@color/tab_text_color"
             android:tag="radio_button0" />
 
         <RadioButton
             android:id="@+id/main_radio_button_medication"
             style="@style/main_tab_bottom"
             android:text="Medicatioin"
-            android:background="@drawable/tab1_select"
+            android:drawableTop="@drawable/tab2_d"
+            android:textColor="@color/tab_text_color"
             android:tag="radio_button1" />
         <RadioButton
             android:id="@+id/main_radio_button_forum"
             style="@style/main_tab_bottom"
             android:text="Forum"
-            android:background="@drawable/tab1_select"
+            android:drawableTop="@drawable/tab3_d"
+            android:textColor="@color/tab_text_color"
             android:tag="radio_button2" />
         <RadioButton
             android:id="@+id/main_radio_button_education"
             style="@style/main_tab_bottom"
             android:text="Education"
-            android:background="@drawable/tab1_select"
+            android:drawableTop="@drawable/tab4_d"
+            android:textColor="@color/tab_text_color"
             android:tag="radio_button3"/>
-
         <RadioButton
             android:id="@+id/main_radio_button_more"
             style="@style/main_tab_bottom"
+            android:drawableTop="@drawable/tab5_d"
+            android:textColor="@color/tab_text_color"
             android:text="More"
-            android:background="@drawable/tab1_select"
             android:tag="radio_button4" />
     </RadioGroup>
 

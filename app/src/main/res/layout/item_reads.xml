@@ -10,13 +10,13 @@
         android:gravity="center_vertical"
         android:layout_width="wrap_content"
         android:layout_height="50dp" />
-    <TextView
+    <ImageView
         android:layout_marginRight="@dimen/margin_right"
-        android:textColor="@android:color/black"
         android:layout_alignParentRight="true"
-        android:text=">"
-        android:gravity="center_vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp" />
+        android:src="@drawable/arraw"
+        android:layout_centerVertical="true"
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+
 
 </RelativeLayout>

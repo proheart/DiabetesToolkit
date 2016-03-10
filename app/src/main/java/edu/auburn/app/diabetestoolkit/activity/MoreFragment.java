@@ -1,5 +1,6 @@
 package edu.auburn.app.diabetestoolkit.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,10 +36,35 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener{
         rlAck.setOnClickListener(this);
         rlPolicy.setOnClickListener(this);
     }
-
+    private static String preString = "file:///android_asset/sys/";
     @Override
     public void onClick(View v) {
+        int id = v.getId();
+        Intent intent = new Intent(getActivity(), WebViewActivity.class);
 
+        switch (id){
+            case R.id.llSetting:
+
+                break;
+            case R.id.rlAbout:
+                intent.putExtra("name","More");
+                String url = preString+"about.html";
+                intent.putExtra("url",url);
+                startActivity(intent);
+                break;
+            case R.id.rlAck:
+                intent.putExtra("name","More");
+                String url_Ack = preString+"acknowledgements.html";
+                intent.putExtra("url",url_Ack);
+                startActivity(intent);
+                break;
+            case R.id.rlPolicy:
+                intent.putExtra("name","More");
+                String url_po = preString+"privacyPolicy.html";
+                intent.putExtra("url",url_po);
+                startActivity(intent);
+                break;
+        }
     }
 
     @Override

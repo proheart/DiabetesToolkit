@@ -44,6 +44,8 @@ public class AddStateActivity extends BaseActivity implements View.OnClickListen
         etNotes = (EditText) findViewById(R.id.etNotes);
         tvDate = (TextView) findViewById(R.id.etDate);
         stateService = new StateService(this);
+        String lastBlood = stateService.getLast().getBlood();
+        tvLast.setText(lastBlood);
         tvCancel.setOnClickListener(this);
         tvSave.setOnClickListener(this);
         tvDate.setOnClickListener(this);

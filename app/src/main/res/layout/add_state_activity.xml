@@ -5,7 +5,9 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
+
         android:layout_width="match_parent"
+        android:background="@color/topBgColor"
         android:layout_height="@dimen/top">
         <TextView
             android:id="@+id/btnCancel"
@@ -26,6 +28,7 @@
             android:textSize="@dimen/topView"
             android:layout_gravity="center"
             android:gravity="center"
+
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,7 +50,8 @@
 
 
     <RelativeLayout
-        android:layout_marginTop="@dimen/margin_top"
+        android:layout_margin="20dip"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
@@ -55,7 +59,7 @@
             android:layout_height="wrap_content"
             android:text="Last Reading"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="10dip" />
+             />
         <TextView
             android:id="@+id/tvLast"
             android:layout_toLeftOf="@+id/tvRight1"
@@ -72,10 +76,15 @@
             android:layout_alignParentRight="true"
             android:layout_marginLeft="10dip" />
     </RelativeLayout>
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
     <RelativeLayout
 
-        android:layout_marginTop="@dimen/margin_top"
+        android:layout_margin="@dimen/margin_top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
@@ -83,21 +92,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Blood Glucose(mg/dL)"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="10dip" />
+            android:layout_alignParentLeft="true" />
         <EditText
             android:id="@+id/etBlood"
+            android:layout_margin="3dp"
+            android:background="@drawable/bg_normal_input_text"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="@dimen/margin_right"
-            android:layout_width="wrap_content"
+
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:hint="e.g. 75"/>
 
 
     </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/line"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_centerVertical="true" />
     <RelativeLayout
-        android:layout_marginTop="@dimen/margin_top"
+        android:layout_margin="@dimen/margin_top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
@@ -105,19 +122,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Notes"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="10dip" />
+            android:layout_alignParentLeft="true" />
         <EditText
             android:id="@+id/etNotes"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="@dimen/margin_right"
-            android:layout_width="wrap_content"
+            android:background="@drawable/bg_normal_input_text"
+
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:hint="e.g. after breakfast" />
+            android:hint="e.g. before sleep" />
     </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/line"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_centerVertical="true" />
     <RelativeLayout
-        android:layout_marginTop="@dimen/margin_top"
+        android:layout_margin="@dimen/margin_top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
@@ -125,8 +149,7 @@
             android:layout_height="wrap_content"
             android:text="Date"
             android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="10dip" />
+            android:layout_alignParentLeft="true" />
         <TextView
             android:singleLine="true"
             android:id="@+id/etDate"
@@ -135,11 +158,17 @@
             android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/margin_right"
             android:hint="select date" />
     </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/line"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_centerVertical="true" />
     <RelativeLayout
-        android:layout_marginTop="@dimen/margin_top"
+        android:layout_margin="@dimen/margin_top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
@@ -147,8 +176,7 @@
             android:layout_height="wrap_content"
             android:text="Time"
             android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="10dip" />
+            android:layout_alignParentLeft="true" />
         <TextView
             android:singleLine="true"
             android:id="@+id/tvTime"
@@ -157,7 +185,6 @@
             android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/margin_right"
             android:hint="select time" />
     </RelativeLayout>
 </LinearLayout>

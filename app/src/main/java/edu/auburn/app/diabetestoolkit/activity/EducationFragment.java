@@ -44,7 +44,7 @@ public class EducationFragment extends BaseFragment{
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             ReadModel m = (ReadModel)parent.getItemAtPosition(position);
             Intent intent = new Intent(getActivity(), WebViewActivity.class);
-            intent.putExtra("name",m.getName());
+            intent.putExtra("name","Education");
             intent.putExtra("url",m.getUrl());
             startActivity(intent);
         }
@@ -70,7 +70,11 @@ public class EducationFragment extends BaseFragment{
             rm = new ReadModel();
             rm.setName(names[i]);
             //http://docs.google.com/gviewembedded=true&url=https://drive.google.com/open?id=0B5lDqW9grSfhWVlTR3Mzc0NkZm8
-            rm.setUrl("https://docs.google.com/gview?embedded=true&url=http://www.auburn.edu/~czm0062/pdf/"+names[i]);
+            if(names[i].contains(".html")){
+                rm.setUrl("file:///android_asset/reading/"+names[i]);
+            }else{
+                rm.setUrl("https://docs.google.com/gview?embedded=true&url=http://www.auburn.edu/~czm0062/pdf/" + names[i]);
+            }
 
             datas.add(rm);
         }
