@@ -70,17 +70,19 @@ public class StateService {
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         String sql = "select * from state order by sid desc";
         Cursor cursor = db.rawQuery(sql,null);
-        cursor.moveToFirst();
-        int sid = cursor.getInt(cursor.getColumnIndex("sid"));
-        String time = cursor.getString(cursor.getColumnIndex("time"));
-        long t = Long.valueOf(time);
-        Date d = new Date(t);
-        String ti = new java.text.SimpleDateFormat("MM/dd/yyyy HH:mm").format(d);
-        String blood = cursor.getString(cursor.getColumnIndex("blood"));
-        String notes = cursor.getString(cursor.getColumnIndex("notes"));
-        StateModel model = new StateModel(sid, ti, blood, notes);
-        cursor.close();
-        return model;
+        if(cursor.moveToFirst()){
+            int sid = cursor.getInt(cursor.getColumnIndex("sid"));
+            String time = cursor.getString(cursor.getColumnIndex("time"));
+            long t = Long.valueOf(time);
+            Date d = new Date(t);
+            String ti = new java.text.SimpleDateFormat("MM/dd/yyyy HH:mm").format(d);
+            String blood = cursor.getString(cursor.getColumnIndex("blood"));
+            String notes = cursor.getString(cursor.getColumnIndex("notes"));
+            m = new StateModel(sid, ti, blood, notes);
+            cursor.close();
+
+        }
+        return m;
     }
 
     public String getDaily(){

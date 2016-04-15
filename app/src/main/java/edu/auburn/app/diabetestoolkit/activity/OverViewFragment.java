@@ -12,6 +12,7 @@ import android.widget.TextView;
 import edu.auburn.app.diabetestoolkit.R;
 import edu.auburn.app.diabetestoolkit.activity.base.BaseFragment;
 import edu.auburn.app.diabetestoolkit.controller.StateService;
+import edu.auburn.app.diabetestoolkit.model.StateModel;
 
 /**
  * Created by liguorui on 2/2/16.
@@ -30,7 +31,12 @@ public class OverViewFragment extends BaseFragment implements View.OnClickListen
     @Override
     public void onResume() {
         super.onResume();
-        String last = service.getLast().getBlood();
+        StateModel m = service.getLast();
+        String last = "";
+        if (m!=null){
+            last = m.getBlood();
+        }
+
         String daily = service.getDaily();
         String monthly = service.getMonth();
         String weekly = service.getWeek();
